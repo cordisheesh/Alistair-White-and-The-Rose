@@ -20,7 +20,7 @@ label start:
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
-    show bg_eye
+    play music "Airegin.mp3"
 
     # These display lines of dialogue.
 
@@ -28,7 +28,7 @@ label start:
 
     a "I was left at home. Plus America wasn't involved until later. Life was somewhat the same."
 
-    a "I am Alistair White, Private Investigator. The day as per started as usual..."
+    a "I am Alistair White, Private Investigator. The day started like any other..."
 
     # This ends the game.
 
