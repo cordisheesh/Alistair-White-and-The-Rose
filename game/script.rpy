@@ -3,7 +3,7 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define e = Character("Eileen")
+define a = Character("Alistair White")
 
 
 # The game starts here.
@@ -24,9 +24,11 @@ label start:
 
     # These display lines of dialogue.
 
-    e "You've created a new Ren'Py game."
+    a "It was September, 1939. The outbreak of the war. An older man like me couldn't fight."
 
-    e "Once you add a story, pictures, and music, you can release it to the world!"
+    a "I was left at home. Plus America wasn't involved until then. Life was somewhat the same."
+
+    a "I am Alistair White, Private Investigator. The day as per started as usual..."
 
     # This ends the game.
 
