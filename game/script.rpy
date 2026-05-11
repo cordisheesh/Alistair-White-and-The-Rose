@@ -34,8 +34,23 @@ label start:
 
     a "I was left at home. Plus America wasn't involved until later. Life was somewhat the same."
 
-    a "I am Alistair White, Private Investigator. The day started like any other..."
+    a "I am Alistair White, Private Investigator. The day started like any other..." 
 
+    window hide
+    scene mirrorshot
+    with fade
+
+    pause 
+    window show
+    a " \"God, I am looking older by the day...\" I say to myself in the mirror... Like an absolute nut!"
+
+    window hide
+    scene bg_office
+
+    pause
+
+    window show
+    a "My lovely office. How nice this place is..."
     # This ends the game.
 
     return
