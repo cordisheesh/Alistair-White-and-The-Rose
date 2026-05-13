@@ -53,6 +53,7 @@ label start:
     window show
     a "My lovely office. How nice this place is..."
     
+    stop music fadeout 1.0
     "KNOCK KNOCK!"
     
     a "Who the Hell is that?"
@@ -71,11 +72,32 @@ label start:
     
     label after_menu:   
 
-    a "Hello Don Dilla... Have we met?"
-   
+    window hide
+    pause
+    show dondilla
+    with fade
+    play music "<from 4>Agua De Beber (Water To Drink).mp3"   
 
-
-
+    a "Hello Don Dalli... Have we met?"
+    d "We have not. I work in risky business Mr White..."
+    a "You're an italian man, in a nice suite... Goes by Don and is here late at night. I can only assume you're a mob boss."
+    show dondillaannoy
+    d "Just because I'm italian? My nonna would be rolling in her grave right now..."
+    show dondilla
+    d "But yes, I am... I'm the head for the Dalli Crime Family. I need your help with a few things"
+    a "Very well, I'm going to charge you big time though."
+    show dondillasmoke
+    d "That is fine. Two of my men have been killed, P.I.! Stuffed with flowers of all things."
+    a "Murder? Sounds like a case for the police-"
+    d "I'm a criminal White. The authorities are useless anyways. Figure out who did this to them."
+    d "These were important Dalli family members. My zio Leo and my cugino Giovanni."
+    a "Fine. 1000 dollars. This is a dangerous case."
+    d "Fine, very well. I'm looking forward to you catching whichever parasite did this to the familia."
+    hide dondillasmoke
+    show dondillasmile
+    d "I left some papers on your table. Locations. Get to it. The Dalli family knows that you can work."
+    d "You took down a fellow Hanear gang, a Soviet mob boss, Nazis... Make good work of this murderer."
+    a "How did you know about my past casses? Doesn't matter anyways. I will get to it."
 
 
 
