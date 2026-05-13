@@ -136,7 +136,7 @@ label start:
     c "No problem, see ya soon man. "
     play music "<from 2.0>Yesterdays.mp3"
     scene bg_phone1
-    a "Time to meet the man himself outside. Hopefully we can't finish this case tonight. If we're lucky."
+    a "Time to meet the man himself outside. Hopefully we can finish this case tonight. If we're lucky."
     a "Let's see where these addresses lead us."
 
 
