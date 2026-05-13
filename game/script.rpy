@@ -7,6 +7,8 @@ define a = Character("Alistair White")
 
 define d = Character("Don Dalli")
 
+define c = Character ("Crowe")
+
 # The game starts here.
 
 label start:
@@ -84,12 +86,14 @@ label start:
     show dondillaannoy
     d "Just because I'm italian? My nonna would be rolling in her grave right now..."
     show dondilla
+    hide dondillaannoy
     d "But yes, I am... I'm the head for the Dalli Crime Family. I need your help with a few things"
     a "Very well, I'm going to charge you big time though."
     show dondillasmoke
+    hide dondilla
     d "That is fine. Two of my men have been killed, P.I.! Stuffed with flowers of all things."
     a "Murder? Sounds like a case for the police-"
-    d "I'm a criminal White. The authorities are useless anyways. Figure out who did this to them."
+    d "I'm a criminal, Mr White. The authorities are useless anyways. Figure out who did this to them."
     d "These were important Dalli family members. My zio Leo and my cugino Giovanni."
     a "Fine. 1000 dollars. This is a dangerous case."
     d "Fine, very well. I'm looking forward to you catching whichever parasite did this to the familia."
@@ -98,6 +102,43 @@ label start:
     d "I left some papers on your table. Locations. Get to it. The Dalli family knows that you can work."
     d "You took down a fellow Hanear gang, a Soviet mob boss, Nazis... Make good work of this murderer."
     a "How did you know about my past casses? Doesn't matter anyways. I will get to it."
+    d "I shall leave you to it."
+    hide dondillasmile
+    with dissolve
+    a "Time to check those papers I suppose."
+
+    scene bg_addresses
+    window hide
+    pause
+
+    a "Papers?!? These are just addresses... Jaysus"
+    a "Is that blood? Eugh, anyways, I guess this is a start. I'm going in blind I suppose."
+    a "I'm going to make a phone call with my police contact, Crowe. He's a smart guy..."
+    a "He'll be able to help"
+    stop music fadeout 1.0 
+
+    scene bg_phone1
+    window hide
+    pause
+    "RING RINGGGG"
+    a "Pick up man..."
+    pause 3.0
+    scene bg_phone2
+    a "Crowe?"
+    c "'Ello Alistair. You call late."
+    a "Sorry, are you up?"
+    c "Sure. What business do you have this time?"
+    a "Mob case. Two murders, apparently \"stuffed with flowers\", whatever that means."
+    c "Interesting... The pay?"
+    a "1000 dollars. 50/50 cut this time 'round?"
+    c "Aye, sounds good Al. I'll meet you outside your building?"
+    a "Yes please. Thank you Crowe, as always."
+    c "No problem, see ya soon man. "
+    play music "<from 2.0>Yesterdays.mp3"
+    scene bg_phone1
+    a "Time to meet the man himself outside. Hopefully we can't finish this case tonight. If we're lucky."
+    a "Let's see where these addresses lead us."
+
 
 
 
