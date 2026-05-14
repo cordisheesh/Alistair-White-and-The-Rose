@@ -139,6 +139,12 @@ label start:
     a "Time to meet the man himself outside. Hopefully we can finish this case tonight. If we're lucky."
     a "Let's see where these addresses lead us."
 
+    scene bg_street1
+
+    a "Where could this man be? I hope I'm not wating in the cold rain for long."
+    a "Maybe I should light a smoke."
+    a "What the Hell is Schwep's?"
+
 
 
 
