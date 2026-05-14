@@ -82,7 +82,7 @@ label start:
 
     a "Hello Don Dalli... Have we met?"
     d "We have not. I work in risky business Mr White..."
-    a "You're an italian man, in a nice suite... Goes by Don and is here late at night. I can only assume you're a mob boss."
+    a "You're an italian man, in a nice suite... Going by Don and is here late at night. I can only assume you're a mob boss."
     show dondillaannoy
     d "Just because I'm italian? My nonna would be rolling in her grave right now..."
     show dondilla
@@ -101,7 +101,7 @@ label start:
     show dondillasmile
     d "I left some papers on your table. Locations. Get to it. The Dalli family knows that you can work."
     d "You took down a fellow Hanear gang, a Soviet mob boss, Nazis... Make good work of this murderer."
-    a "How did you know about my past casses? Doesn't matter anyways. I will get to it."
+    a "How did you know about my past cases? Doesn't matter anyways. I will get to it."
     d "I shall leave you to it."
     hide dondillasmile
     with dissolve
@@ -140,7 +140,8 @@ label start:
     a "Let's see where these addresses lead us."
 
     scene bg_street1
-
+    hide window
+    pause
     a "Where could this man be? I hope I'm not wating in the cold rain for long."
     a "Maybe I should light a smoke."
     a "What the Hell is Schwep's?"
