@@ -142,9 +142,26 @@ label start:
     scene bg_street1
     hide window
     pause
+    "Outside..."
     a "Where could this man be? I hope I'm not wating in the cold rain for long."
     a "Maybe I should light a smoke."
-    a "What the Hell is Schwep's?"
+    a "What the Hell is Schmep's?"
+    show crowe
+    with fade
+    c "Hello there Alistair, cold night, ain't it?"
+    a "Crowe! Good to see you."
+    c "What do we have to work with? Gimme a run down, spare some details. We don't have all night, yeah?"
+    a "Mob killings, two victims stuffed with flowers, like I mentioned earlier on the phone."
+    hide crowe
+    show croweinterest
+    c "Yeah, that's right. The murderer might be going with some sort of calling card. Their own \"shtick\" I suppose."
+    a "I can only assume so. I was provided two addresses for each murder. 56 Angie Way and 81 Drumond Drive."
+    c "No further details? I guess the mobs around here like to keep their secrets."
+    a "I have no idea where these addresses lead. Where do you want to check out first?"
+    hide croweinterest
+    show crowesmile
+    c "Alistair, you're the lead investigator here. I trust your judgement more than my own."
+    a "Sure. Let's see..."
 
 
 
