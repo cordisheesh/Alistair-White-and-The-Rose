@@ -163,6 +163,33 @@ label start:
     c "Alistair, you're the lead investigator here. I trust your judgement more than my own."
     a "Sure. Let's see..."
 
+    menu:
+        "Let's try Angie Way":
+            a "Let's go to Angie Way first. Nicer name. Hopefully a less bloody crime scene"
+            c "We can only hope, eh?"
+            a "Let's get going..."
+            stop music
+            hide crowesmile
+            scene angie
+            window hide
+            play music "<from 4>My Funny Valentine.mp3"
+            pause
+            a "This is it, a garage."
+            c "Let me get upfront..."
+            show crowe
+            with fade
+            c "Spooky place."
+
+
+
+
+        "Let's try Drumond Drive":
+            a "Let's go to Drumond Drive. I like the alliteration."
+            c "Very well, rhyming boy."
+            c "Boy? Who are you calling boy?"
+            d "Nothing....Let's get going"
+
+
 
 
 
