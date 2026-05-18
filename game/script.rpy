@@ -218,7 +218,7 @@ label start:
             
             label murder1:  
 
-            a "It must be a combination of both"
+            a "It must be a combination of both!"
             hide croweinterest
             show crowe 
             c "Is that so?"
@@ -227,7 +227,9 @@ label start:
             c "And the flowers on top... The calling card."
             a "That's right Crowe."
             a "I see a hammer behind you... Let me see that..."
-            scene hammer 
+            scene hammer
+            a "Interesting... Leed's Shoppe?"
+            c "I swear that's a store here, in Hanear!"
 
 
 
