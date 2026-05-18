@@ -178,7 +178,56 @@ label start:
             c "Let me get upfront..."
             show crowe
             with fade
-            c "Spooky place."
+            c "Spooky place, ain't it?"
+            a "I've dealt with worse. Prepare yourself."
+            hide crowe
+            show crowesmile
+            c "For a guy stuffed with flowers? I've dealt with worse..."
+            a "Funny guy, you are. Let's head in and see what a man stuffed with flowers looks like."
+            hide crowe
+            stop music
+            scene murder1
+            with fade
+            window hide
+            pause
+            
+            c "Oh Lord..."
+            a "There he is. Stuffed with flowers in the mouth."
+            c "Bleeding out his holes too. Eyes, ears, nose..."
+            a "I notice some marks, from blunt force. You can see around his arms."
+            scene garageinside
+            show crowescared
+            play music "<from 4>My Funny Valentine.mp3"
+            c "I wonder what finished him off. Poisoning, judging by the bleeding? Or just smacked to death."
+            a "And flowers added just as some sort of garnish?"
+            hide crowescared
+            show croweinterest
+            c "Calling card! I knew it..."
+            c "Anyways, what do you think?"
+            menu:
+                "Blunt force.":
+                    a "I think it has to be the hitting..."
+                    a "All of the marks..."
+                    a "His arms were basically purple. That wouldn't kill him though..."
+                    jump murder1
+                "Poisoning.":
+                    a "I think it has to be poison..."
+                    a "The bleeding from the eyes, ears, and nose..."
+                    a "But how about all of those marks?"
+                    jump murder1
+            
+            label murder1:  
+
+            a "It must be a combination of both"
+            hide croweinterest
+            show crowe 
+            c "Is that so?"
+            a "I predict a surprise attack, constant hitting. But a prior poisoning to that."
+            a "The killer poisoned him, but it must of taken too long. The murderer might have hit him to finish him off. Then the poison acted quickly."
+            c "And the flowers on top... The calling card."
+            a "That's right Crowe."
+            a "I see a hammer behind you... Let me see that..."
+            scene hammer 
 
 
 
