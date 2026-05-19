@@ -9,6 +9,9 @@ define d = Character("Don Dalli")
 
 define c = Character ("Crowe")
 
+default preferences.text_cps = 45
+default preferences.afm_enable = False
+
 # The game starts here.
 
 label start:
@@ -63,7 +66,8 @@ label start:
     menu:
         
         "Who the Hell are you?":    
-            a "Who the Hell are you? Knocking on my door at 10 pm! Office hours, ever heard of them?"
+            a "Who the Hell are you? Knocking on my door at 10 pm! 
+            a "Office hours, ever heard of them?"
             d "It is the Don... Don Dalli. Learn to show respect and open this door, you {i}cazzo{/i}!"
             jump after_menu
         
@@ -82,24 +86,30 @@ label start:
 
     a "Hello Don Dalli... Have we met?"
     d "We have not. I work in risky business Mr White..."
-    a "You're an italian man, in a nice suite... Going by Don and is here late at night. I can only assume you're a mob boss."
+    a "You're an italian man, in a nice suite... 
+    a "Going by Don and is here late at night. I can only assume you're a mob boss."
     show dondillaannoy
-    d "Just because I'm italian? My nonna would be rolling in her grave right now..."
+    d "Just because I'm italian? 
+    d "My nonna would be rolling in her grave right now..."
     show dondilla
     hide dondillaannoy
-    d "But yes, I am... I'm the head for the Dalli Crime Family. I need your help with a few things"
+    d "But yes, I am... I'm the head for the Dalli Crime Family. 
+    d "I need your help with a few things"
     a "Very well, I'm going to charge you big time though."
     show dondillasmoke
     hide dondilla
-    d "That is fine. Two of my men have been killed, P.I.! Stuffed with flowers of all things."
+    d "That is fine. Two of my men have been killed, P.I.! 
+    d "Stuffed with flowers of all things."
     a "Murder? Sounds like a case for the police-"
-    d "I'm a criminal, Mr White. The authorities are useless anyways. Figure out who did this to them."
+    d "I'm a criminal, Mr White. The authorities are useless anyways. 
+    d "Figure out who did this to them."
     d "These were important Dalli family members. My zio Leo and my cugino Giovanni."
     a "Fine. 1000 dollars. This is a dangerous case."
     d "Fine, very well. I'm looking forward to you catching whichever parasite did this to the familia."
     hide dondillasmoke
     show dondillasmile
-    d "I left some papers on your table. Locations. Get to it. The Dalli family knows that you can work."
+    d "I left some papers on your table. Locations. Get to it. 
+    D "The Dalli family knows that you can work."
     d "You took down a fellow Hanear gang, a Soviet mob boss, Nazis... Make good work of this murderer."
     a "How did you know about my past cases? Doesn't matter anyways. I will get to it."
     d "I shall leave you to it."
@@ -112,7 +122,8 @@ label start:
     pause
 
     a "Papers?!? These are just addresses... Jaysus"
-    a "Is that blood? Eugh, anyways, I guess this is a start. I'm going in blind I suppose."
+    a "Is that blood? Eugh, anyways, I guess this is a start. 
+    a "I'm going in blind I suppose."
     a "I'm going to make a phone call with my police contact, Crowe. He's a smart guy..."
     a "He'll be able to help"
     stop music fadeout 1.0 
@@ -150,14 +161,18 @@ label start:
     with fade
     c "Hello there Alistair, cold night, ain't it?"
     a "Crowe! Good to see you."
-    c "What do we have to work with? Gimme a run down, spare some details. We don't have all night, yeah?"
+    c "What do we have to work with? 
+    c "Gimme a run down, spare some details. We don't have all night, yeah?"
     a "Mob killings, two victims stuffed with flowers, like I mentioned earlier on the phone."
     hide crowe
     show croweinterest
-    c "Yeah, that's right. The murderer might be going with some sort of calling card. Their own \"shtick\" I suppose."
-    a "I can only assume so. I was provided two addresses for each murder. 56 Angie Way and 81 Drumond Drive."
+    c "Yeah, that's right. The murderer might be going with some sort of calling card. 
+    c "Their own \"shtick\" I suppose."
+    a "I can only assume so. I was provided two addresses for each murder. 
+    a "56 Angie Way and 81 Drumond Drive."
     c "No further details? I guess the mobs around here like to keep their secrets."
-    a "I have no idea where these addresses lead. Where do you want to check out first?"
+    a "I have no idea where these addresses lead. 
+    a "Where do you want to check out first?"
     hide croweinterest
     show crowesmile
     c "Alistair, you're the lead investigator here. I trust your judgement more than my own."
@@ -223,7 +238,8 @@ label start:
             show crowe 
             c "Is that so?"
             a "I predict a surprise attack, constant hitting. But a prior poisoning to that."
-            a "The killer poisoned him, but it must of taken too long. The murderer might have hit him to finish him off. Then the poison acted quickly."
+            a "The killer poisoned him, but it must of taken too long. 
+            a "The murderer might have hit him to finish him off. Then the poison acted quickly."
             c "And the flowers on top... The calling card."
             a "That's right Crowe."
             a "I see a hammer behind you... Let me see that..."
@@ -238,7 +254,11 @@ label start:
             a "Let's go to Drumond Drive. I like the alliteration."
             c "Very well, rhyming boy."
             c "Boy? Who are you calling boy?"
-            d "Nothing....Let's get going"
+            a "Nothing....Let's get going"
+            scene timmys
+            
+            
+
 
 
 
