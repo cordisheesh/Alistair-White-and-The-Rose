@@ -66,7 +66,7 @@ label start:
     menu:
         
         "Who the Hell are you?":    
-            a "Who the Hell are you? Knocking on my door at 10 pm! 
+            a "Who the Hell are you? Knocking on my door at 10 pm!"
             a "Office hours, ever heard of them?"
             d "It is the Don... Don Dalli. Learn to show respect and open this door, you {i}cazzo{/i}!"
             jump after_menu
@@ -86,30 +86,30 @@ label start:
 
     a "Hello Don Dalli... Have we met?"
     d "We have not. I work in risky business Mr White..."
-    a "You're an italian man, in a nice suite... 
+    a "You're an italian man, in a nice suite..."
     a "Going by Don and is here late at night. I can only assume you're a mob boss."
     show dondillaannoy
-    d "Just because I'm italian? 
+    d "Just because I'm italian?"
     d "My nonna would be rolling in her grave right now..."
     show dondilla
     hide dondillaannoy
-    d "But yes, I am... I'm the head for the Dalli Crime Family. 
+    d "But yes, I am... I'm the head for the Dalli Crime Family." 
     d "I need your help with a few things"
     a "Very well, I'm going to charge you big time though."
     show dondillasmoke
     hide dondilla
-    d "That is fine. Two of my men have been killed, P.I.! 
+    d "That is fine. Two of my men have been killed, P.I.!" 
     d "Stuffed with flowers of all things."
     a "Murder? Sounds like a case for the police-"
-    d "I'm a criminal, Mr White. The authorities are useless anyways. 
+    d "I'm a criminal, Mr White. The authorities are useless anyways." 
     d "Figure out who did this to them."
     d "These were important Dalli family members. My zio Leo and my cugino Giovanni."
     a "Fine. 1000 dollars. This is a dangerous case."
     d "Fine, very well. I'm looking forward to you catching whichever parasite did this to the familia."
     hide dondillasmoke
     show dondillasmile
-    d "I left some papers on your table. Locations. Get to it. 
-    D "The Dalli family knows that you can work."
+    d "I left some papers on your table. Locations. Get to it."
+    d "The Dalli family knows that you can work."
     d "You took down a fellow Hanear gang, a Soviet mob boss, Nazis... Make good work of this murderer."
     a "How did you know about my past cases? Doesn't matter anyways. I will get to it."
     d "I shall leave you to it."
@@ -122,7 +122,7 @@ label start:
     pause
 
     a "Papers?!? These are just addresses... Jaysus"
-    a "Is that blood? Eugh, anyways, I guess this is a start. 
+    a "Is that blood? Eugh, anyways, I guess this is a start." 
     a "I'm going in blind I suppose."
     a "I'm going to make a phone call with my police contact, Crowe. He's a smart guy..."
     a "He'll be able to help"
@@ -161,17 +161,17 @@ label start:
     with fade
     c "Hello there Alistair, cold night, ain't it?"
     a "Crowe! Good to see you."
-    c "What do we have to work with? 
+    c "What do we have to work with?"
     c "Gimme a run down, spare some details. We don't have all night, yeah?"
     a "Mob killings, two victims stuffed with flowers, like I mentioned earlier on the phone."
     hide crowe
     show croweinterest
-    c "Yeah, that's right. The murderer might be going with some sort of calling card. 
+    c "Yeah, that's right. The murderer might be going with some sort of calling card."
     c "Their own \"shtick\" I suppose."
-    a "I can only assume so. I was provided two addresses for each murder. 
+    a "I can only assume so. I was provided two addresses for each murder."
     a "56 Angie Way and 81 Drumond Drive."
     c "No further details? I guess the mobs around here like to keep their secrets."
-    a "I have no idea where these addresses lead. 
+    a "I have no idea where these addresses lead." 
     a "Where do you want to check out first?"
     hide croweinterest
     show crowesmile
@@ -238,7 +238,7 @@ label start:
             show crowe 
             c "Is that so?"
             a "I predict a surprise attack, constant hitting. But a prior poisoning to that."
-            a "The killer poisoned him, but it must of taken too long. 
+            a "The killer poisoned him, but it must of taken too long." 
             a "The murderer might have hit him to finish him off. Then the poison acted quickly."
             c "And the flowers on top... The calling card."
             a "That's right Crowe."
@@ -246,6 +246,19 @@ label start:
             scene hammer
             a "Interesting... Leed's Shoppe?"
             c "I swear that's a store here, in Hanear!"
+            c "Wait... This doesn't mean this hammer is the killer's."
+            c "It could have just been previously owned by the man here."
+            scene garageinside
+            show crowe
+            a "Let's look at the other tools... Hmmmm..."
+            a "All different brands. This is the odd one out, this garage already has a hammer."
+            c "But why'd they bring a hammer? And leave it?"
+            c "It's almost like..."
+            hide crowe
+            show crowescared
+            a "They wanted to be caught. We must proceed with caution from here on out..."
+            c "Aye... Let's head back outside"
+            jump murders
 
 
 
@@ -253,11 +266,59 @@ label start:
         "Let's try Drumond Drive":
             a "Let's go to Drumond Drive. I like the alliteration."
             c "Very well, rhyming boy."
-            c "Boy? Who are you calling boy?"
-            a "Nothing....Let's get going"
+            a "Boy? Who are you calling boy?"
+            c "Nothing....Let's get going"
             scene timmys
+            with fade
+            play music "<from 2>Footprints.mp3"
+            c "Timmy's?"
+            a "Yeup, a Dalli family front... A Dalli family stronghold."
+            show crowe
+            with fade
+            c "Jeez, this murderer hates the Dallis..."
+            a "Let's keep that in mind. Wanna head in?"
+            c "Let's get going."
+            scene murder2
+            with fade
+            stop music
+            hide window 
+            pause
+            c "I have no words."
+            a "I do. Hung up, and stabbed a bunch of times."
+            c "Let's leave this room"
+            scene restaurant
+            show crowescared
+            a "Spooked?"
+            hide crowescared
+            show crowe
+            c "I'm fine..."
+            play music "<from 2>Footprints.mp3"
+            a "What do you think happened?"
+            c "Hung up and stabbed. Wrapped around with vines and flowers."
+            a "The calling card. It's almost like whoever's doing this wants to be caught."
+            c "What's this... I see something..."
+            scene knife
+            a "The murder weapon..."
+            c "This doesn't help at all!"
+            c "We don't have the time for fingerprints."
+            a "Yes we do... but we don't need fingerprints anyways"
+            scene restaurant
+            show crowe
+            a "Check this out... A bloodied receipt, beside the knife... Of this knife's purchase?"
+            c "We're by a kitchen. Did she really have to buy a knife?"
+            a "We've established that the murderer wants to be caught..."
+            a "The receipt is for Leed's Shoppe."
+            c "Well, might as well get going..."
+            a "Let's proceed with caution though."
+            a "We don't want to be hung up with flowers next..."
+            c "You're right. Let's go."
+            jump murders
+        
+    label murders :
             
-            
+    scene bg_street1
+    show croweinterest
+    a "Okay, let's think."
 
 
 
