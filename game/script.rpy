@@ -319,6 +319,15 @@ label start:
     scene bg_street1
     show croweinterest
     a "Okay, let's think."
+    c "This murderer wants to be caught."
+    a "Indeed they do. The calling card, leaving around blantant clues..."
+    c "So we must proceed with caution."
+    c "With how though?"
+    show crowesmile
+    a "With guns. You got yours?"
+    c "Of course."
+    a "Good. Now, let's head to this \"Leed's Shoppe\", shall we?"
+    c "Aye aye, sir."
 
 
 
