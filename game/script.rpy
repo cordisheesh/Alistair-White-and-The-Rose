@@ -125,7 +125,7 @@ label start:
     a "Is that blood? Eugh, anyways, I guess this is a start." 
     a "I'm going in blind I suppose."
     a "I'm going to make a phone call with my police contact, Crowe. He's a smart guy..."
-    a "He'll be able to help"
+    a "He'll be able to help."
     stop music fadeout 1.0 
 
     scene bg_phone1
@@ -265,9 +265,9 @@ label start:
 
         "Let's try Drumond Drive":
             a "Let's go to Drumond Drive. I like the alliteration."
-            c "Very well, rhyming boy."
+            c "Very well, word boy."
             a "Boy? Who are you calling boy?"
-            c "Nothing....Let's get going"
+            c "Nothing....Let's get going..."
             scene timmys
             with fade
             play music "<from 2>Footprints.mp3"
@@ -278,9 +278,9 @@ label start:
             c "Jeez, this murderer hates the Dallis..."
             a "Let's keep that in mind. Wanna head in?"
             c "Let's get going."
+            stop music
             scene murder2
             with fade
-            stop music
             hide window 
             pause
             c "I have no words."
@@ -317,6 +317,7 @@ label start:
     label murders :
             
     scene bg_street1
+    with fade
     show croweinterest
     a "Okay, let's think."
     c "This murderer wants to be caught."
