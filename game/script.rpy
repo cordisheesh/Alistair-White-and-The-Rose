@@ -285,7 +285,7 @@ label start:
             pause
             c "I have no words."
             a "I do. Hung up, and stabbed a bunch of times."
-            c "Let's leave this room"
+            c "Let's leave this room."
             scene restaurant
             show crowescared
             a "Spooked?"
@@ -319,16 +319,78 @@ label start:
     scene bg_street1
     with fade
     show croweinterest
+    stop music
     a "Okay, let's think."
     c "This murderer wants to be caught."
     a "Indeed they do. The calling card, leaving around blantant clues..."
     c "So we must proceed with caution."
-    c "With how though?"
+    c "How though?"
     show crowesmile
     a "With guns. You got yours?"
     c "Of course."
     a "Good. Now, let's head to this \"Leed's Shoppe\", shall we?"
     c "Aye aye, sir."
+
+    scene leeds
+    with fade
+    window hide
+    pause
+    play music "<from 4>Juju.mp3"
+    show crowe
+    with fade
+    c "So this is Leed's."
+    a "Sketchy part of town..."
+    c "This is Hanear! Most of this city is sketchy."
+    hide crowe
+    show crowesmile
+    a "Ha! You make a good point there, Crowe."
+    c "Now! Shall we head in?"
+    a "Yes. Expect the worse though. Be on high alert."
+    c "I always am..."
+    
+    scene garden1
+    with fade
+    show croweinterest
+    with fade
+    c "So this is Leed's. Big selection of flowers and plants..."
+    a "The flowers just like our murderer's..."
+    a "This is definetely where they got their stuff."
+    hide croweinterest
+    show crowe
+    c "Want to explore? How about we check the garden behind me."
+    a "Sure. Ready your gun. The murderer is probably waiting for us."
+    a "I don't think they have a gun though."
+    a "They probably would have used it on their victims."
+    c "Or maybe they're sick and doesn't want to use a gun..."
+    a "Fair point..."
+    stop music
+    "BANG!!!"
+    hide crowe
+    show crowescared
+    c "That was from behind me!!!"
+    c "We have to go in!!!"
+    a "With cautionm, Crowe!"
+    scene garden2
+    with fade
+    show crowegun 
+    with fade
+    c "Let's be slow... I don't want to get spooked or anything..."
+    a "This is like a game of cat and mouse!"
+    a "I'll watch your back..."
+    a "It's real quiet..."
+    scene garden2eye
+    show crowegun
+    a "Wait a second... Crowe... Back there..."
+    c "Hm??"
+    scene roseeye
+    with fade
+    window hide
+    pause
+    a "There's an eye!!!"
+    a "It has to be the murderer!!!"
+    a "Crowe!! Shoot!!!"
+
+
 
 
 
