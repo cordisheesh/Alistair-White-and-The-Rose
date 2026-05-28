@@ -9,8 +9,17 @@ define d = Character("Don Dalli")
 
 define c = Character ("Crowe")
 
+define r = Character ("The Rose")
+
 default preferences.text_cps = 45
 default preferences.afm_enable = False
+
+transform shake:
+    linear 0.175 xoffset -2
+    linear 0.175 xoffset +0
+    linear 0.175 yoffset -2
+    linear 0.175 yoffset +0
+    repeat
 
 # The game starts here.
 
@@ -369,7 +378,7 @@ label start:
     show crowescared
     c "That was from behind me!!!"
     c "We have to go in!!!"
-    a "With cautionm, Crowe!"
+    a "With caution, Crowe!"
     scene garden2
     with fade
     show crowegun 
@@ -389,6 +398,164 @@ label start:
     a "There's an eye!!!"
     a "It has to be the murderer!!!"
     a "Crowe!! Shoot!!!"
+    scene gun
+    with fade
+    window hide
+    pause
+    "BANG BANG"
+    "BANG"
+    c "Do you think I got 'em?"
+    scene gunaftermath
+    window hide
+    pause
+    play music "<from 4>Juju.mp3"
+    c "Do you think I got 'em?"
+    a "I'm afraid not. You shot a whole lot of plants."
+    c "Dammit!"
+
+    menu:
+        "Let's split up.":
+            a "We should split up, cover more ground that way."
+            c "What? Hell no! There's a murderer amongst us, remember?"
+            a "I think this is the right decision Crowe!"
+            a "We have to catch them!"
+            c "Fine, you have your gun right?"
+            a "Yes, I'll explore the building."
+            jump decision1
+
+        "Come with me.":
+            a "Come with me Crowe."
+            c "We have our own guns, right?"
+            c "No need to split up!"
+            a "Crowe, are you su-"
+            c "Let's split ways."
+            a "Okay, yell for help when needed."
+            jump decision1
+    
+    label decision1 :
+    scene garden1
+    a "Where to look, where to look..."
+    a "Hmmmmm...."
+    stop music
+    show rose
+    with fade
+    r "Hello. I am The Rose. Your murderer."
+    a "Is that a knife pressed against my stomach?"
+    r "Yes it is."
+    r "Who are you... You don't look like a Dalli."
+    a "That's because I am not. I'm Alistair White, private eye."
+    r "You're no use to me. But I can't let you leave..."
+    a "You have a thing for Dallis, don't you?"
+    hide rose
+    show rosesmile
+    r "Oh yes. I love killing them."
+    a "That so? Why?"
+    r "They're a plague to this city, you know that right?"
+    a "I do."
+    r "Then if you know what's good for you, you'll leave me be."
+    hide rosesmile
+    show rose
+    r "Let me continue killing them. Let me lead them here."
+    r "What say you?"
+
+    menu:
+        "Killing is not the way.":
+            a "Killing won't solve shit."
+            r "Yes it will."
+            a "It leaves a power vacuum. Another horrible gang will take its place."
+            r "Then I'll kill them too."
+            a "Violence breeds violence."
+            r "Better then letting stupid lawyers and cops deal with it."
+            a "Rose, I'll let you off the hook if you just stop."
+            r "THE Rose to you. And..."
+            r "No!"
+            jump rose1
+
+        "I get it.":
+            a "I get it. I hate the Dallis too."
+            r "Then kill them with me."
+            a "I have killed gangs in the past..."
+            hide rose
+            show rosesmile
+            r "See? Then you won't have any problem with it!"
+            a "No! I am beyond that..."
+            hide rosesmile
+            show rose
+            r "Help me."
+            jump rose1
+    
+    label rose1 :
+    c "I got you!"
+    hide rose
+    show rosefrown at shake
+    "BANG BANG"
+    show rosefrown at reset
+    r "GAH"
+    hide rosefrown
+    with dissolve
+    show crowe
+    c "You okay?"
+    a "Y-yeah..."
+    c "Well, let's go after her!"
+    scene leeds
+    show crowe
+    c "Where could have that women gone..."
+    c "What was her deal?"
+    a "Hates the Dallis."
+    c "Why? Well, I know why... but why?"
+    a "We didn't get to it..."
+    c "You alright Al?"
+    a "Yeah yeah... she made a good point though."
+    c "Killing Dallis is good?"
+    a "Yes... I've killed in the past... Why shouldn't I stop now?"
+    a "The Dallis are horrible."
+    a "Murder, robberies, trafficking, extorsion... so much more..."
+    c "She's getting into your head!"
+    a "I have a license to kill. Shouldn't I use this for good?"
+    c "You can't go around killing people."
+    c "You're not the law. The law can't even do that."
+    a "I..."
+    hide crowe
+    show crowescared
+    c "Are you thinking of joining her?"
+    a "No... Maybe..."
+    hide crowescared
+    show crowe
+    c "Enough of this. I'm going to drop this case with you..."
+    c "If you continue this behavior."
+    a "What? What are you, my mom?"
+    hide crowe
+    show crowesmile
+    c "Maybe..."
+    c "I am younger than you however."
+    a "Har har."
+    c "Listen... I think I'm out. It's all you now..."
+    c "I don't care what you do. Just don't get kiled by her..."
+    c "Or the Dallis..."
+    a "I'll try."
+    c "See you, Al."
+    c "Call me next time when you have a case without a moral questioning session."
+    a "Ha! Bye Crowe... thank you."
+    c "Good luck."
+    hide crowesmile
+    with dissolve
+    a "Let me think..."
+    
+    play music "<from 2.0>Yesterdays.mp3"
+    scene bg_street1
+    a "Okay... What to think..."
+    r "Psst!"
+    show rose
+    with fade
+    r "Hello Al..."
+    a "Were you eavesdropping?"
+    r "Maybe..."
+    a "Listen, I still think you're sick... But maybe we can do something..."
+    hide rose
+    show rosesmile
+    r "About that Dalli problem?"
+    a "Yes."
+    a "Again, let me think..."
 
 
 
