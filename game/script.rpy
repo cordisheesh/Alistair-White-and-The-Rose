@@ -556,6 +556,44 @@ label start:
     r "About that Dalli problem?"
     a "Yes."
     a "Again, let me think..."
+    stop music
+
+    menu:
+        "I'm not letting you go.":
+            a "I'm not letting you get away."
+            hide rosesmile
+            show rose
+            r "Huh?"
+            r "Is that your gun... Pointed to me..."
+            a "Yes..."
+            r "Al, you can't be real..."
+            a "You're acting like you know me! You don't!"
+            r "So you're not going to kill them, but me?"
+            a "I'm taking you into the station."
+            r "On what business? Who do you think you are?"
+            a "CITIZENS ARREST!"
+            r "CITIZENS ARREST MY ASS!"
+            a "Hey, don't reach for my gun!"
+            r "Get that outta here!"
+            "BANG"
+            hide rose
+            show roseblood
+            r "Gruhugh..."
+            r "You just shot... My stomach..."
+            r "Asshole..."
+            a "Shit."
+            a "HELP! SOMEONE CALL AN ABULANCE!"
+            r "It's no use. You are a traitor to the people of Hanear..."
+            hide roseblood
+            with dissolve
+
+            a "Welp..."
+            a "I might have to call it a day here..."
+            play music "<from 2.0>Yesterdays.mp3"
+            a "1000 dollars though, not bad."
+
+
+
 
 
 
