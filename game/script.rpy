@@ -587,10 +587,12 @@ label start:
             hide roseblood
             with dissolve
 
-            a "Welp..."
-            a "I might have to call it a day here..."
+            a "I'm sorry Rose..."
+            a "I'll find you some help. Or someone."
+            a "I didn't want it to end this way..."
+            a "Might as well let the Don know. And Crowe."
             play music "<from 2.0>Yesterdays.mp3"
-            a "1000 dollars though, not bad."
+            a "A thousand dollars though..."
 
 
 
