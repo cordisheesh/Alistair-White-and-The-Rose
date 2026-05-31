@@ -11,6 +11,8 @@ define c = Character ("Crowe")
 
 define r = Character ("The Rose")
 
+define g = Character ("Henchman")
+
 default preferences.text_cps = 45
 default preferences.afm_enable = False
 
@@ -314,7 +316,7 @@ label start:
             scene restaurant
             show crowe
             a "Check this out... A bloodied receipt, beside the knife... Of this knife's purchase?"
-            c "We're by a kitchen. Did she really have to buy a knife?"
+            c "We're by a kitchen. Did they really have to buy a knife?"
             a "We've established that the murderer wants to be caught..."
             a "The receipt is for Leed's Shoppe."
             c "Well, might as well get going..."
@@ -633,6 +635,79 @@ label start:
                 "Split.":
                     a "Let's split up. Cover more area."
                     a "Then take the bastard by surprise."
+                    r "Okay, okay good."
+                    r "Guns ready?"
+                    a "Yeup, let's head in..."
+                    scene basenoguard
+                    with fade
+                    hide window
+                    pause
+                    a "Okay, a staircase. That can mean something..."
+                    a "I hear someone coming."
+                    show goon
+                    g "Who the Hell are you?"
+                    g "Hey-"
+                    hide goon
+                    show goonshot
+                    "BANG"
+                    hide goonshot
+                    with dissolve
+                    a "Shit."
+                    "BANG BANG BANG"
+                    a "More gunshots from inside!"
+                    a "It must be Rose!"
+                    play music "<from 4>500 Miles High.Mp3"
+                    scene escape
+                    a "The Don! Over there!"
+                    a "His men are covering for him!"
+                    a "He's escaping!"
+                    a "I'm going after that crook while the Rose has my back!"
+
+                    stop music
+                    scene dallidock
+
+                    a "The Don! Hello!"
+                    a "It's just you and me."
+                    a "What, no gun?"
+                    d "Alistair White?"
+
+                    scene dillaclose
+
+                    d "It is you..."
+                    d "You cazzo!!!"
+                    d "You're a traitor."
+                    a "I thought you knew my past?"
+                    a "You knew what I did to other mobs..."
+                    d "There's a special place in Hell for people like you."
+                    a "Really? That's rich coming from you-"
+                    d "I will make sure you're going to be a dead ma-"
+                    scene dallial
+                    window hide
+                    pause
+                    "BANG!"
+                    scene dallidockdead
+                    window hide
+                    pause
+                    a "That's enough outta you."
+                    a "Didn't even get paid..."
+                    scene dockyard
+                    play music "<from 4>Agua De Beber (Water To Drink).mp3"
+                    a "The gunshots are no more..."
+                    a "Its quiet..."
+                    "WEE-WOO WEE-WOO"
+                    a "Nevermind. Where's the Rose?"
+                    "WEE-WOO WEEEE-WOOOO"
+                    a "Shit, the sirens are getting closer."
+                    a "I don't want to explain things to the cops..."
+                    a "I gotta scram."
+                    a "I hope you're good, Rose..."
+                    a "It was nice to get the Don with your help..."
+                    a "Wherever you are."
+                    scene end1
+                    with fade
+                    hide window
+                    pause
+
 
                 "Stick.":
                     a "Let's stick together."
