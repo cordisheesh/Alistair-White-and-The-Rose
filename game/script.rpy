@@ -23,12 +23,12 @@ transform shake:
 
 # The game starts here.
 
-label start:
-
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
-
+label start:  
+    scene intro
+    window hide
+    pause
+    
+    
     play music "Airegin.mp3"
 
     window hide
@@ -530,7 +530,7 @@ label start:
     c "I am younger than you however."
     a "Har har."
     c "Listen... I think I'm out. It's all you now..."
-    c "I don't care what you do. Just don't get kiled by her..."
+    c "I don't care what you do. Just don't get killed by her..."
     c "Or the Dallis..."
     a "I'll try."
     c "See you, Al."
@@ -543,7 +543,7 @@ label start:
     
     play music "<from 2.0>Yesterdays.mp3"
     scene bg_street1
-    a "Okay... What to think..."
+    a "Okay... What should I think?..."
     r "Psst!"
     show rose
     with fade
@@ -553,8 +553,11 @@ label start:
     a "Listen, I still think you're sick... But maybe we can do something..."
     hide rose
     show rosesmile
-    r "About that Dalli problem?"
-    a "Yes."
+    r "About that Dalli problem?" 
+    r "The Dallis are the greater evil here..."
+    r "We are both vigilantes. You and I..."
+    a "Don't dumb it down to that..."
+    a "But yes, the Dalli problem..."
     a "Again, let me think..."
     stop music
 
@@ -573,6 +576,8 @@ label start:
             r "On what business? Who do you think you are?"
             a "CITIZENS ARREST!"
             r "CITIZENS ARREST MY ASS!"
+            r "You're making a mistake!"
+            r "Point that thing away from me!"
             a "Hey, don't reach for my gun!"
             r "Get that outta here!"
             "BANG"
@@ -581,18 +586,138 @@ label start:
             r "Gruhugh..."
             r "You just shot... My stomach..."
             r "Asshole..."
-            a "Shit."
+            a "Shit... Rose... I didn't..."
             a "HELP! SOMEONE CALL AN ABULANCE!"
             r "It's no use. You are a traitor to the people of Hanear..."
+            r "I hope you enjoy your pay..."
             hide roseblood
             with dissolve
 
-            a "I'm sorry Rose..."
-            a "I'll find you some help. Or someone."
+            a "I'm sorry, Rose..."
+            a "I'll find you something to help. Or someone."
             a "I didn't want it to end this way..."
             a "Might as well let the Don know. And Crowe."
-            play music "<from 2.0>Yesterdays.mp3"
-            a "A thousand dollars though..."
+            play music "<from 4>My Funny Valentine.mp3"
+            a "That's it from me..."
+            scene end3
+            with fade
+            window hide
+            pause
+
+        "Sure, I'll help you...":
+            a "We may be able to figure something out."
+            r "Thank you!"
+            play music "<from 4>Agua De Beber (Water To Drink).mp3"
+            r "I knew you were a smart man."
+            a "I hate the Dallis more than I do you."
+            a "What are we going to do?"
+            r "The Don has an operation in the dockyard."
+            r "We head there, and take him by surprise!"
+            a "Very well. So we're going for the head of the family?"
+            r "Indeed we are. I have a gun, and so do you."
+            r "We should be good, if sneaky..."
+            a "Alright, let's head over..."
+
+            scene dockyard
+            stop music
+            window hide
+            show rose
+            r "Okay, we have to be quiet..."
+            r "The Don must be in the garage over there..."
+            r "How do you want to approach this?"
+            a "Is this not your plan?"
+            r "You want this bad too. The Don dead."
+            a "Fine... We should maybe..."
+
+            menu:
+                "Split.":
+                    a "Let's split up. Cover more area."
+                    a "Then take the bastard by surprise."
+
+                "Stick.":
+                    a "Let's stick together."
+                    a "We'd be picked off like ducks if we split up..."
+                    hide rose
+                    show rosesmile
+                    r "Very well, Al. Good thinkin'..."
+                    a "Let's head in..."
+                    
+                    scene base
+                    with fade
+                    hide window
+                    pause
+                    r "Psst... There's a staircase..."
+                    r "I'm assuming the Don's office has gotta be up there."
+                    r "Sign of authority or something."
+                    a "There's a guard there though!"
+                    r "Just wait a second, relax..."
+                    scene basenoguard
+                    r "See? He's gone now."
+                    a "Okay, let's head up."
+
+                    scene deck
+                    a "It's the office!"
+                    r "Shh!"
+                    r "Let's sneak in... You can see him through the glass."
+                    a "Okay... On three..."
+                    a "One, two,... three!"
+
+                    scene dillaclose
+                    with fade
+                    d "What the Hell?"
+                    d "ALISTAIR WHITE?"
+                    d "Who are you with? HOW ARE YOU HERE?"
+                    d "AND YOU HAVE GUNS?"
+                    r "I am the Rose and I'm here to kill you."
+                    d "Wha-?"
+                    
+                    scene dallirose
+                    with fade
+                    "BANG"
+                    a "Rose, we have to go! There's lots of shuffling!"
+                    play music "<from 4>500 Miles High.mp3"
+                    a "His men know we're here!"
+                    a "The gunshot snitched! LET'S RUN!"
+
+                    scene exits
+                    a "Thanks for the cover, Rose!"
+                    a "The exit is almost there!"
+                    a "You're still behind me, right?"
+                    r "Yes! Let's go!"
+
+                    scene dockyard
+                    show roseblood
+                    stop music
+                    a "We did it..."
+                    a "Rose? Are you okay? You're bleeding!"
+                    r "I am. Thanks for your help..."
+                    r "Arh..."
+                    a "You must of got some stray bullets back there."
+                    a "Let's get you some aid-"
+                    r "No. I am satisfied... Here."
+                    a "Two thousand dollars?"
+                    r "I got it from the Don's office."
+                    r "Payment, I suppose."
+                    r "Goodbye Al... That was fun.. Gah..."
+                    r "I'll be fine. Bye."
+                    hide roseblood
+                    with dissolve
+                    a "That... can't be good."
+                    a "She's gone now... I hope she got what she wanted."
+                    a "I got what I wanted."
+                    a "Money."
+
+                    play music "<from 2.0>Yesterdays.mp3"
+                    a "Strange case it was tonight..."
+                    a "I need some sleep..."
+                    scene end2
+                    with fade
+                    window hide
+                    pause
+
+
+
+
 
 
 
